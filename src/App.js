@@ -1,6 +1,8 @@
 import './App.css';
 import logo from './logo.svg'; 
-import { useState } from 'react';
+
+import { AboutPage } from './useStates/AboutPage';
+import { MyButton } from './useStates/MyButton';
 
 const products = [
     { title: 'Cabbage', isFruit: false, id: 1 },
@@ -8,24 +10,6 @@ const products = [
     { title: 'Apple', isFruit: true, id: 3 },
 ];
 
-function MyButton() {
-    const [count, setCount] = useState(0);
-    function handleClick() {
-        alert('You clicked me!');
-        setCount(count + 1);
-    }
-    return (
-        <button onClick={handleClick}>Clicked {count} times</button>
-    );
-}
-function AboutPage() {
-    return (
-        <>
-            <h1>About</h1>
-            <p>Hello there.<br />How do you do?</p>
-        </>
-    );
-}
 
 export default function MyApp() {
     const listItems = products.map(product =>
@@ -41,11 +25,11 @@ export default function MyApp() {
     return (
         <div>
             <img src={logo} className="App-logo" alt="logo" />
-            <AboutPage></AboutPage>
+            <AboutPage/>
             <h1>
                 Welcome to my app
             </h1>
-            <MyButton></MyButton>
+            <MyButton/>
 
             <ul>{listItems}</ul>
         </div>
