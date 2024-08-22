@@ -1,8 +1,8 @@
 import './App.css';
 import logo from './logo.svg'; 
 
-import { AboutPage } from './useStates/AboutPage';
-import { MyButton } from './useStates/MyButton';
+import { AboutPage } from './Components/AboutPage';
+import { MyButton } from './Components/MyButton';
 
 const products = [
     { title: 'Cabbage', isFruit: false, id: 1 },
